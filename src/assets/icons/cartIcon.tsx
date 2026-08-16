@@ -1,6 +1,9 @@
+import { BadgeIcon } from "@/src/components/ui/badgeIcon"
+
 export const CartIcon = () => {
   return (
-    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+    <div className="relative inline-block">
+      <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
       <g clipPath="url(#clip0_15_35)">
         <rect width="24" height="24" fill="none"/>
         <path d="M5.33331 6H19.8672C20.4687 6 20.9341 6.52718 20.8595 7.12403L20.1095 13.124C20.0469 13.6245 19.6215 14 19.1172 14H16.5555H9.44442H7.99998" stroke="#000000" strokeLinejoin="round"/>
@@ -14,5 +17,7 @@ export const CartIcon = () => {
         </clipPath>
       </defs>
     </svg>
+      <BadgeIcon variant='cart'/>
+    </div>
   )
 }

@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { Badge, Button } from "./index"
+import { BadgeProduct, Button } from "./index"
 import type { DetailCard, DetailsProduct } from "@/src/types/types.types"
 import { FavoriteProductIcon, FavoriteDefaultProductIcon } from "@/src/assets/icons"
 import { handlerName } from "@/src/features/handlerName"
@@ -27,8 +27,8 @@ export const Card = ({product}: {product: DetailsProduct}) => {
     <div className="min-h-110 w-70 mb-4 p-4 flex flex-col justify-between items-center border border-[#C4C4C4] rounded-xl shadow-xl bg-white">
       <div className="w-full flex justify-between">
         <div className="w-full flex justify-start gap-2 items-center">
-          <Badge hidden={labels?.new ? false : true}>{labels.new}</Badge>
-          <Badge hidden={labels?.discount ? false : true}>{labels.discount}</Badge>
+          <BadgeProduct hidden={labels?.new ? false : true}>{labels.new}</BadgeProduct>
+          <BadgeProduct hidden={labels?.discount ? false : true}>{labels.discount}</BadgeProduct>
         </div>
           <span onClick={() => isFavorite(favorites, id) ? deleteFavoriteStore(product) : addProductToFavorites(product)} className="flex justify-between items-center cursor-pointer">
             { favorite ? <FavoriteProductIcon/> : <FavoriteDefaultProductIcon/> }

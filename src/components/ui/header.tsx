@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { CartIcon, FavoriteIcon } from "@/src/assets/icons/index"
-import { Search } from "./search"
+//import { Search } from "./search"
 import { usePathname } from "next/navigation"
 import cn from "classnames"
 
@@ -14,12 +14,12 @@ export const Header = () => {
     <header>
       <div className="w-full flex justify-between items-center p-5 border-b border-[#C4C4C4]">
         <Link href='/' className={`text-3xl ${path === '/' ? activePage : ""}`}>Catalog</Link>
-        <Search/>
+        {/* {path === "/" ? <Search></Search> : <></>} */}
         <nav className="flex gap-4">
-          <Link className={path === '/cart' ? activePage : ""} href='/cart'>
+          <Link href='/cart' className={path === '/cart' ? activePage : ""}>
             <CartIcon/>
           </Link>
-          <Link className={path === '/favorites' ? activePage : ""} href='/favorites'>
+          <Link href='/favorites' className={path === '/favorites' ? activePage : ""} >
             <FavoriteIcon/>
           </Link>
         </nav>

@@ -1,43 +1,9 @@
 "use client"
-import { Badge, Button, Header } from "@/src/components/ui"
+import { BadgeProduct, Button, Header } from "@/src/components/ui"
 import { useGetProduct, useGetProducts } from "@/src/hooks"
 import { DetailsProduct } from "@/src/types/types.types"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-
-const PRODUCTSTATIC: DetailsProduct[] = [
-{
-    "available": true,
-    "id": 608204,
-    "labels": {
-      "discount": "Есть скидка",
-      "new": "Новинки"
-    },
-    "name": "Карабин охотничий Adler AD-500, калибр 308Win., L=510",
-    "preview_picture": "https://ohotaktiv.ru/upload/resize_cache/iblock/e13/200_200_1/e02rm12cwkqqeubx6bu9becysk0kewwd.webp",
-    "price": 120990,
-    "price_discount": 119990,
-    "quantity": 39,
-    "reviews": 0,
-    "characteristics": [
-        ,
-        {
-            "label": "Длина ствола",
-            "name": "barrel_length",
-            "value": "510 мм"
-        },
-        {
-            "label": "Вес",
-            "name": "weight",
-            "value": "3.5 кг"
-        },
-        {
-            "label": "Ёмкость магазина",
-            "name": "magazine_capacity",
-            "value": "5 патронов"
-        }
-    ]
-}]
 
 const Product = () => {
   const pathName = usePathname().split("/")
@@ -59,8 +25,8 @@ const Product = () => {
           </div>
           <div className="flex flex-col justify-between items-start gap-3">
             <div className="flex gap-5">
-              <Badge hidden={product.labels?.new ? false : true}>{product.labels.new}</Badge>
-              <Badge hidden={product.labels?.discount ? false : true} >{product.labels.discount}</Badge>
+              <BadgeProduct hidden={product.labels?.new ? false : true}>{product.labels.new}</BadgeProduct>
+              <BadgeProduct hidden={product.labels?.discount ? false : true} >{product.labels.discount}</BadgeProduct>
             </div>
             <span className="text-2xl font-bold">{product.name}</span>
             <div className="flex gap-2">
