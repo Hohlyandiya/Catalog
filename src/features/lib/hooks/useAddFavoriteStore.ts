@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
-import { DetailsProduct } from "../types/types.types"
-import { addFavorite } from "../store/slices/favoritesSlice"
+import { DetailsProduct } from "@/src/types/types.types"
+import { addFavorite } from "@/src/entities/favorites/model/favoritesSlice.slice"
 
 export const useAddFavoriteStore = () => {
   const dispatch = useDispatch()

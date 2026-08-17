@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
-import { DetailsProduct } from "../types/types.types"
-import { addCart } from "../store/slices/cartSlice"
+import { DetailsProduct } from "@/src/types/types.types"
+import { addCart } from "@/src/entities/cart/model/cartSlice.slice"
 
 export const useAddProductStore = () => {
   const dispatch = useDispatch()

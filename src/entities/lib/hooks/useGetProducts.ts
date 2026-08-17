@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { selectors } from "../entities/products/model/productsSlice.slice"
+import { selectors } from "@/src/entities/products/model/productsSlice.slice"
 
 export const useGetProducts = () => {
   const products = useSelector(state => {

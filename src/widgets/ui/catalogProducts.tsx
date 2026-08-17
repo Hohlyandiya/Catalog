@@ -1,8 +1,9 @@
 'use client';
-import { Filter } from "@/src/components/ui/index"
+import { Filter } from "@/src/widgets/ui/index"
 import type { DetailsProduct } from '@/src/types/types.types'
 import getCards from '@/src/features/getCards'
-import { useGetProducts, useSetProductsStore } from '@/src/hooks';
+import { useSetProductsStore } from '@/src/features/lib/hooks';
+import { useGetProducts } from "@/src/hooks";
 import { Loading } from "@/src/assets/icons";
 import { useEffect, useState } from "react";
 import cn from "classnames";
