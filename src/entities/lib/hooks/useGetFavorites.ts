@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { selectors } from "../entities/favorites/model/favoritesSlice.slice"
+import { selectors } from "@/src/entities/favorites/model/favoritesSlice.slice"
 
 export const useGetFavorites = () => {
   const favorites = useSelector(state => {

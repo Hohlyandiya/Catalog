@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
-import { DetailsProduct } from "../types/types.types"
-import { deleteCart } from "../store/slices/cartSlice"
+import { DetailsProduct } from "@/src/types/types.types"
+import { deleteCart } from "@/src/entities/cart/model/cartSlice.slice"
 
 export const useDeleteProductStore = () => {
   const dispatch = useDispatch()

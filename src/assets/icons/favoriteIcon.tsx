@@ -1,4 +1,4 @@
-import { BadgeIcon } from "@/src/components/ui/badgeIcon"
+import { BadgeIcon } from "@/src/widgets/ui/badgeIcon"
 
 export const FavoriteIcon = () => {
   return (

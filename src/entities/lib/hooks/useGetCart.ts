@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { selectors } from "../entities/cart/model/cartSlice.slice"
+import { selectors } from "@/src/entities/cart/model/cartSlice.slice"
 
 export const useGetCart = () => {
   const cart = useSelector(state => {
